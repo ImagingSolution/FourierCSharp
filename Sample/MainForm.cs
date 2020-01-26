@@ -28,7 +28,6 @@ namespace FourierTransform
 
         private void mnuFileLoadData_Click(object sender, EventArgs e)
         {
-
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "CSV(*.csv;*.htm)|*.csv";
 
@@ -94,9 +93,10 @@ namespace FourierTransform
             DrawGraph();
         }
 
-
         private void mnuWindowHamming_Click(object sender, EventArgs e)
         {
+            if (_complexSrc == null) return;
+
             // ハミング窓
             FourierCSharp.FourierTransform.Hamming(_complexSrc);
             // フーリエ変換
@@ -107,6 +107,8 @@ namespace FourierTransform
 
         private void mnuWindowHanning_Click(object sender, EventArgs e)
         {
+            if (_complexSrc == null) return;
+     
             // ハミング窓
             FourierCSharp.FourierTransform.Hanning(_complexSrc);
             // フーリエ変換
@@ -117,6 +119,8 @@ namespace FourierTransform
 
         private void mnuWindowBlackman_Click(object sender, EventArgs e)
         {
+            if (_complexSrc == null) return;
+      
             // ブラックマン窓
             FourierCSharp.FourierTransform.Blackman(_complexSrc);
             // フーリエ変換
@@ -171,6 +175,8 @@ namespace FourierTransform
         /// </summary>
         private void DrawGraph()
         {
+            if (_complexSrc == null) return;
+
             // 変換前データのグラフ描画
             DrawRealData(_complexSrc);
             // 変換前データの表示
@@ -188,6 +194,8 @@ namespace FourierTransform
         /// <param name="data"></param>
         private void DrawRealData(Complex[] data)
         {
+            if (data == null) return;
+
             // /////////////////////////////////////////////////////
             // Chartコントロール内のグラフ、凡例、目盛り領域を削除
             chtData.Series.Clear();
@@ -247,6 +255,8 @@ namespace FourierTransform
         /// <param name="data">複素数の配列</param>
         private void DrawMagnitudeData(Complex[] data)
         {
+            if (data == null) return;
+
             // /////////////////////////////////////////////////////
             // Chartコントロール内のグラフ、凡例、目盛り領域を削除
             chtFourier.Series.Clear();
@@ -290,6 +300,8 @@ namespace FourierTransform
         /// <param name="data">複素数のデータ</param>
         private void SetDataGridViewData(DataGridView dgv, Complex[] data)
         {
+            if (data == null) return;
+
             // データ削除
             dgv.Rows.Clear();
 

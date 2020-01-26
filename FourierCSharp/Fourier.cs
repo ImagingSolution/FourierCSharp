@@ -44,7 +44,6 @@ namespace FourierCSharp
         /// <returns></returns>
         public static int Fft(System.Numerics.Complex[] compSrc, ref System.Numerics.Complex[] compDst, double id = 1.0)
         {
-
             // 引き数チェック
             if (compSrc == null) return -1;
 
@@ -199,6 +198,8 @@ namespace FourierCSharp
         /// <param name="data"></param>
         public static void Hamming(System.Numerics.Complex[] data)
         {
+            if (data == null) return;
+
             int dataCount = data.Length;
 
             var radTemp = 2.0 * Math.PI / (double)dataCount;
@@ -215,6 +216,8 @@ namespace FourierCSharp
         /// <param name="data"></param>
         public static void Hanning(System.Numerics.Complex[] data)
         {
+            if (data == null) return;
+
             int dataCount = data.Length;
 
             var radTemp = 2.0 * Math.PI / (double)dataCount;
@@ -231,6 +234,8 @@ namespace FourierCSharp
         /// <param name="data"></param>
         public static void Blackman(System.Numerics.Complex[] data)
         {
+            if (data == null) return;
+
             int dataCount = data.Length;
 
             var radTemp = 2.0 * Math.PI / (double)dataCount;
