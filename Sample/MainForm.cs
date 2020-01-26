@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 using System.Numerics;  // System.Numericsへの参照が必要
 
-namespace Sample
+namespace FourierTransform
 {
     public partial class MainForm : Form
     {

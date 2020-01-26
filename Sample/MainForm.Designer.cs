@@ -1,4 +1,4 @@
-﻿namespace Sample
+﻿namespace FourierTransform
 {
     partial class MainForm
     {

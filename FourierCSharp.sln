@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourierCSharp", "FourierCSharp\FourierCSharp.csproj", "{A892BE21-BCE7-4ABE-B591-80CB00B2AEF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{3A0B421E-95BD-4986-9D09-EBE3B679226B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourierTransform", "Sample\FourierTransform.csproj", "{3A0B421E-95BD-4986-9D09-EBE3B679226B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
